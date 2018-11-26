@@ -23,6 +23,10 @@ function callback(response, status) {
   console.log(response);
   var distance = response.rows[0].elements[0].distance.text;
   var duration = response.rows[0].elements[0].duration.text;
+  var listItem = document.createElement("li");
+  listItem.className = "list";
+  container.appendChild(listItem);
+  listItem.innerHTML = distance + " </br> " + duration 
   console.log(distance);
   console.log(duration);
 }
